@@ -208,72 +208,105 @@ This file is generated from repository truth and bounded for the web channel. It
     "acceptance": {
       "policy": "solution-admission-v1"
     },
-    "aliases": [],
+    "aliases": [
+      "Open Problem Garden OPG-46533"
+    ],
     "allowed_axioms": [
-      "none"
+      "finite-graph-basic",
+      "finite-combinatorics"
     ],
     "assumptions": [
-      "This record must never be treated as an active research problem."
+      "All graphs and digraphs are finite and simple unless the statement explicitly says otherwise."
     ],
     "constraints": {
       "allowed_adapters": [
-        "template-validation-v1"
+        "degeneracy-coloring-sat-v1",
+        "lean-obligation-v1"
       ],
       "allowed_methods": [
-        "discovery"
+        "discovery",
+        "derivation",
+        "computation",
+        "proof",
+        "formalization"
       ],
-      "max_attempts": 1,
+      "max_attempts": 20,
       "runtime": {
-        "max_output_bytes": 65536,
-        "max_retries": 1,
-        "max_transitions": 10,
-        "timeout_seconds": 60
+        "max_output_bytes": 5242880,
+        "max_retries": 3,
+        "max_transitions": 300,
+        "timeout_seconds": 1800
       }
     },
-    "created_at": "2026-09-06T00:00:00Z",
+    "created_at": "2026-09-06T04:47:54Z",
     "definitions": [
       {
-        "definition": "A non-admitted draft record used only to validate the physical public repository template.",
-        "term": "template placeholder"
+        "definition": "A graph in which every nonempty subgraph has a vertex of degree at most k.",
+        "term": "k-degenerate graph"
+      },
+      {
+        "definition": "The graph on the common vertex set whose edge set is the union of the two edge sets.",
+        "term": "graph union"
+      },
+      {
+        "definition": "Admits a proper vertex coloring using at most five colors.",
+        "term": "5-colorable"
       }
     ],
     "domain": {
-      "description": "Template-only placeholder domain; not a mathematical research question.",
+      "description": "Finite simple graphs expressible as the union of a 1-degenerate graph and a 2-degenerate graph.",
       "objects": [
-        "template-placeholder"
+        "degenerate graph",
+        "graph union",
+        "proper vertex coloring"
       ]
     },
-    "lifecycle": "draft",
+    "lifecycle": "active",
     "msc": [
-      "00A00"
+      "05C15"
     ],
-    "problem_id": "problem:template-placeholder",
+    "problem_id": "problem:opg-46533-degenerate-union-coloring",
     "quantifiers": [
       {
-        "domain": "a reviewed public canonical ProblemContract supplied by the repository builder",
-        "kind": "find",
+        "domain": "finite simple graphs satisfying V(G₁)=V(G₂)=V(G), E(G)=E(G₁)∪E(G₂), G₁ 1-degenerate and G₂ 2-degenerate",
+        "kind": "forall",
         "variables": [
-          "replacement_problem"
+          "G",
+          "G₁",
+          "G₂"
+        ]
+      },
+      {
+        "domain": "proper vertex colorings c:V(G)→{1,…,5}",
+        "kind": "exists",
+        "variables": [
+          "c"
         ]
       }
     ],
     "schema_version": "1.0.0",
     "sources": [
       {
-        "retrieved_at": "2026-09-06T00:00:00Z",
-        "source": "Vibe Mathing public Web Harness",
-        "source_record_id": "public-template-placeholder-v1",
-        "url": "https://github.com/vibemathing/vibe-mathing-problem-public-template"
+        "retrieved_at": "2026-09-02T00:06:43Z",
+        "source": "UnsolvedMath",
+        "source_record_id": "unsolvedmath-opg-46533-cd40a328ad57",
+        "url": "https://www.unsolvedmath.com/problems/OPG-46533"
+      },
+      {
+        "retrieved_at": "2026-09-06T04:47:54Z",
+        "source": "current-status-review",
+        "source_record_id": null,
+        "url": "https://www.unsolvedmath.com/problems/OPG-46533"
       }
     ],
     "statement": {
       "language": "en",
-      "text": "This is a non-research placeholder. Replace it with exactly one reviewed public ProblemContract before creating a public problem repository.",
+      "text": "If a finite simple graph G has spanning subgraphs G₁ and G₂ with E(G)=E(G₁)∪E(G₂), where G₁ is 1-degenerate and G₂ is 2-degenerate, must G be 5-colorable?",
       "version": 1
     },
-    "title": "Vibe Mathing public problem repository template placeholder",
-    "updated_at": "2026-09-06T00:00:00Z"
+    "title": "Coloring the union of degenerate graphs",
+    "updated_at": "2026-09-06T04:47:54Z"
   },
-  "problem_contract_sha256": "e64cd03254e03dd661eade23243c3c21793fc2d8bffa2d33c172cf8ed2e7f940"
+  "problem_contract_sha256": "85bb6c7f8ccc0cde31967bc8d0df5475a897863af6cf8cb28008769749d601eb"
 }
 ```
