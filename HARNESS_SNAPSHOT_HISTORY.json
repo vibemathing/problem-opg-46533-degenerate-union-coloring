@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "harness_snapshot_sha256": "3555c619b5f43e2e5a7c308413b94c958232318d61ed0bc513fd664c5406815b",
+      "harness_version": "1.1.0",
+      "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+      "source_manifest_sha256": "7dfdb41a68bfda314d663ba03b4b2a713ea194168ade5287e58c6434be5cc4fb",
+      "tree_sha256": "d9fcbb4994e812a85f4ddc761a822c6866922b9ed460e3cf3d2fceeb39c22844"
+    },
+    {
+      "harness_snapshot_sha256": "44dd7320d2b63ff38be1b5d1ac1253a775c585e148472a03945f95af87f10ca6",
+      "harness_version": "1.2.4",
+      "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+      "source_manifest_sha256": "fedd664f1ac16c5232eb05076b73f2bab566ed672840e7f2af851c77253813b3",
+      "tree_sha256": "3b9c9d5991ee326c4891377cc9af727e8fc562af01528e2347156658cb1ee541"
+    }
+  ],
+  "repository": "vibemathing/problem-opg-46533-degenerate-union-coloring",
+  "repository_identity": {
+    "database_id": 1358797519,
+    "default_branch": "main",
+    "node_id": "R_kgDOUP2azw",
+    "visibility": "public"
+  },
+  "schema_version": "1.0.0"
+}
